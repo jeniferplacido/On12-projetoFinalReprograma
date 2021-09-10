@@ -85,15 +85,21 @@ const updatePoderosas = async (req, res) => {
 const deletePoderosa = async (req, res) => {
   const authHeader = req.get('authorization')
   const token = authHeader.split(' ')[1]
-  if(authHeader == undefined){
+
+  if(!token){
     return res.status(403).send({message: "Por gentileza informar autorização"})
   }
-  jwt.verify(token, SECRET, async (err) => {
+
+  jwt.verify(token, SECRET, async (err)=> {
+
     if(err){
-      res.status(403).send({message: "token inválido", err})
+      res.status(403).send({message: "Token inválido"})
     }
+
     const poderosa = await Poderosas.find()
+      res.json(poderosa)
   })
+
   try{
     const poderosas = await poderosasSchema.findById(req.params.id)
     if(poderosas == null){
