@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const podeSchema = new mongoose.Schema({
+const poderosasSchema = new mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId, 
   nome_completo: {type: String, required: true},
   o_que_eu_quero: {type: String, required: true},
@@ -10,4 +10,4 @@ const podeSchema = new mongoose.Schema({
   email: {type: String, required: true}
 });
 
-module.exports = mongoose.model('poderosas', podeSchema)
+module.exports = mongoose.model('poderosas', poderosasSchema)

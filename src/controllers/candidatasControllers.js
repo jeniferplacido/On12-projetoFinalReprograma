@@ -2,25 +2,22 @@ const mongoose = require('mongoose');
 const Poderosas = require('../models/poderosasSchema')
 
 const getAll = async (req, res) => {
-  Poderosas.find((err, local) => {
-      if (err) {
-          return res.status(500).send({ message: err.message });
-      };
-      return res.status(200).send(Poderosas);
-  });
-};  
+  const mulheres = await Poderosas.find() 
+    res.status(200).json(mulheres)
+}
+
 
 const createPoderosa = async (req, res) => {
 
-  const poderosas = new poderosasSchema({
+  const poderosas = new Poderosas({
 
-    _id: mongoose.Schema.Types.ObjectId(), 
-  nome_completo: {type: String, required: true},
-  o_que_eu_quero: {type: String, required: true},
-  cidade_estado: {type: String, required: true},
-  linkedin: {type: String, required: true},
-  github: {type: String, required: true},
-  email: {type: String, required: true}
+    _id: new mongoose.Types.ObjectId(), 
+  nome_completo: req.body.nome_completo,
+  o_que_eu_quero: req.body.o_que_eu_quero,
+  cidade_estado: req.body.cidade_estado,
+  linkedin: req.body.linkedin,
+  github: req.body.github,
+  email: req.body.email
   })
   try {
     const newPoderosa = await poderosas.save()
