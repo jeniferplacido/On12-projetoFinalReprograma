@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
-const poderosasSchema = require('../models/poderosasSchema')
+const Poderosas = require('../models/poderosasSchema')
 
 const getAll = async (req, res) => {
-    const poderosas = await poderosasSchema.find().populate('Poderosas')
-    res.status(200).json(poderosas)
-};
+  Poderosas.find((err, local) => {
+      if (err) {
+          return res.status(500).send({ message: err.message });
+      };
+      return res.status(200).send(Poderosas);
+  });
+};  
 
 const createPoderosa = async (req, res) => {
 

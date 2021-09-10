@@ -3,6 +3,7 @@ const cors = require ('cors')
 const db = require ('./data/database')
 const app = express();
 const poderosas= require("./routes/candidatas.routes");
+
 db.connect();
 app.use(express.json());
 
