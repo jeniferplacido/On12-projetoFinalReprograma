@@ -1,22 +1,14 @@
 require('dotenv').config();
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
-mongoose.Promise = global.Promise;
+const MONGODB_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/dev-poderosas'
 
-const MONGO_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/reprograma-conexao'
-;
-
-const connect = () => {
-    mongoose.connect(MONGO_URL, {
-        useMongoClient: true
-    })
-    .then(()=>{
-        console.log("Poderosas no MongoDb")
-    })
-    .catch((err)=>{
-        console.log("Não está rodando!")
-        console.error(err)
-    })
+const connect = () => {mongoose.connect(MONGODB_URL, {
+useNewUrlParser: true,
+useUnifiedTopology: true
+})
+.then(console.log('Database conectada com sucesso!'))
+.catch(err => console.err)
 }
 
-module.exports = { connect }
+module.exports = {connect}
