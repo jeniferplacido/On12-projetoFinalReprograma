@@ -24,3 +24,6 @@ e se um dia, lá na frente,
 a vida der uma ré,
 recupere sua fé
 e RECOMECE novamente.
+
+
+# Obrigado On12  💖💖💖💖💖💖💖
