@@ -13,7 +13,8 @@ A Idéia é ajudar as minhas amigas da turma On12 , divulgando suas softskils, s
 
 ![monophy](https://user-images.githubusercontent.com/66445871/132948479-b243916d-9fbf-4f84-aec2-07e21374f8e7.gif)
 
-## Recomece, se refaça,
+## 
+Recomece, se refaça,
 relembre o que foi bom,
 reconstrua cada sonho,
 redescubra algum dom,
