@@ -3,4 +3,6 @@
 
 ## Quem Somos?
 
-As Desenvolvedoras poderosas On12 da conexão São Paulo x Pernambuco  e viemos para reprogramar o mundo através de código e muitas histórias lindas e motivadoras!!!
+As Desenvolvedoras poderosas On12 da conexão São Paulo x Pernambuco  e viemos para reprogramar o mundo através de código e muitas histórias lindas e motivadoras!!
+
+O que não falta aqui é motivação e força de vontade então contrate uma dev-poderosa você não vai se arrepender.
